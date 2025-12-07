@@ -96,7 +96,9 @@ function Navbar({
               </div>
               {navLinks.map((link) => (
                 <ul>
-                  <NavLink className="w-fit">{link.linkText}</NavLink>
+                  <NavLink className="w-fit" to={link.url} end>
+                    {link.linkText}
+                  </NavLink>
 
                   {link?.subLinks?.map(({ linkText, url, id }) => (
                     <div className="mt-2 ">
@@ -104,6 +106,7 @@ function Navbar({
                         key={id}
                         className="w-fit ml-8 relative after:absolute after:w-2 after:h-2 after:border-2 after:rounded-full after:-left-4 after:top-1/2 after:-translate-y-1/2 dark:after:opacity-50"
                         to={url}
+                        end
                       >
                         {linkText}
                       </NavLink>

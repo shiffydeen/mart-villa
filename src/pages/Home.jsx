@@ -55,7 +55,7 @@ export default function Home() {
           backgroundSize: "contain",
         }}
       >
-        <div className="absolute top-0 right-0 bg-[#04a7ff]/30 w-72 h-72 rounded-full blur-[120px]"></div>
+        <div className="absolute top-0 right-0 bg-[#04a7ff]/30 w-72 h-72 rounded-full blur-[120px] -z-10"></div>
         <div className="basis-[20rem] flex-1">
           <h1 className="text-4xl md:text-5xl capitalize font-bold">
             Property Consisting <br /> Land And Buildings
@@ -92,8 +92,8 @@ export default function Home() {
         </div>
       </div>
       {/* search */}
-      <div className="px-4 max-w-7xl -mt-8 sm:-mt-20">
-        <div className="shadow-lg rounded-lg p-4 flex flex-col gap-4 md:flex-row items-center">
+      <div className="px-4 max-w-7xl -mt-8 sm:-mt-20 relative">
+        <div className="shadow-xl rounded-lg p-4 flex flex-col gap-4 md:flex-row items-center dark:shadow-none">
           <div className="flex flex-col gap-4 sm:flex-row flex-1 w-full">
             <div className="bg-slate-100 p-2 border rounded-lg flex-1">
               <p className="font-bold">Location</p>
