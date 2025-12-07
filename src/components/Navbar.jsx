@@ -40,7 +40,7 @@ function Navbar({
 
   return (
     <div
-      className="fixed w-full top-0 py-2 border-b left-0 dark:border-dark dark:bg-card-dark/60"
+      className="fixed w-full top-0 py-2 border-b left-0 dark:border-dark dark:bg-card-dark/60 z-20 bg-white/60 backdrop-blur-sm"
       onMouseOver={handleClose}
     >
       <div className="flex justify-between items-center max-w-7xl mx-auto px-4">
@@ -144,11 +144,11 @@ function Navbar({
             >
               {mode ? <FiSun /> : <FiMoon />}
             </div>
-            <div className="bg-white shadow-md w-9 h-9 grid place-items-center rounded-full hover:shadow-lg sm:cursor-pointer dark:bg-dark-light">
+            <div className="bg-white flex-shrink-0 shadow-md w-9 h-9 grid place-items-center rounded-full hover:shadow-lg sm:cursor-pointer dark:bg-dark-light">
               <BiUser />
             </div>
             <div
-              className="md:hidden w-9 h-9 grid place-items-center rounded-full hover:bg-slate-200 cursor-pointer transition-all duration-300 ease-in-out"
+              className="md:hidden w-9 h-9 grid place-items-center rounded-full hover:bg-slate-200 cursor-pointer transition-all duration-300 ease-in-out flex-shrink-0"
               onClick={openSidebar}
             >
               <BiMenu />

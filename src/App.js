@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Dropdown from "./components/Dropdown";
 import Navbar from "./components/Navbar";
 import { navLinks } from "./data/navLinks";
+import Home from "./pages/Home";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -61,6 +63,11 @@ function App() {
         position={position}
         currentLink={currentLink}
       />
+      <div className="" onMouseOver={closeDropdown}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
     </div>
   );
 }
