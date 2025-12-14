@@ -93,9 +93,9 @@ export default function Home() {
       </div>
       {/* search */}
       <div className="px-4 max-w-7xl -mt-8 sm:-mt-20 relative">
-        <div className="shadow-xl rounded-lg p-4 flex flex-col gap-4 md:flex-row items-center dark:shadow-none">
+        <div className="shadow-xl rounded-lg p-4 flex flex-col gap-4 md:flex-row items-center card">
           <div className="flex flex-col gap-4 sm:flex-row flex-1 w-full">
-            <div className="bg-slate-100 p-2 border rounded-lg flex-1">
+            <div className="bg-slate-100 dark:bg-dark-light p-2 card-bordered rounded-lg flex-1">
               <p className="font-bold">Location</p>
               <div className="flex items-center gap-x-2">
                 <BiMap />
@@ -106,7 +106,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="bg-slate-100 p-2 border rounded-lg flex-1">
+            <div className="bg-slate-100 dark:bg-dark-light p-2 card-bordered rounded-lg flex-1">
               <p className="font-bold">Property Type</p>
               <div className="flex items-center gap-x-2">
                 <BiBuildingHouse />
@@ -128,7 +128,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col gap-4 sm:flex-row flex-1 w-full">
-            <div className="bg-slate-100 p-2 border rounded-lg flex-1">
+            <div className="bg-slate-100 dark:bg-dark-light p-2 card-bordered rounded-lg flex-1">
               <p className="font-bold">Price range</p>
               <div className="flex items-center gap-x-2">
                 <BiMoney />
@@ -150,7 +150,7 @@ export default function Home() {
                 </select>
               </div>
             </div>
-            <div className="bg-slate-100 p-2 border rounded-lg flex-1">
+            <div className="bg-slate-100 dark:bg-dark-light p-2 card-bordered rounded-lg flex-1">
               <p className="font-bold">For</p>
               <div className="flex items-center gap-x-2">
                 <BiBriefcase />
@@ -178,7 +178,7 @@ export default function Home() {
             className="grid-cols-1  w-full h-full"
           />
           <div className="bg-secondary p-5 flex items-center flex-col gap-5 md:col-span-2 md:flex-row">
-            <div className="bg-white/80 w-fit p-3 rounded-lg -mt-16 backdrop-blur-sm sm:mt-0 sm:-ml-72 md:-ml-20 flex-shrink-0">
+            <div className="bg-white/80 dark:bg-dark-light/60 w-fit p-3 rounded-lg -mt-16 backdrop-blur-sm sm:mt-0 sm:-ml-72 md:-ml-20 flex-shrink-0">
               <div className="flex">
                 <img
                   src="/images/avatar.png"
@@ -211,9 +211,13 @@ export default function Home() {
                 You invest in the apartment of your choice
               </h1>
               <div className="flex items-center gap-3 mt-5">
-                <div className="flex items-center bg-white  px-3 py-2 w-fit rounded-lg gap-2">
+                <div className="flex items-center bg-white dark:bg-dark-light  px-3 py-2 w-fit rounded-lg gap-2">
                   <FiHome />
-                  <input type="text" placeholder="Find your nice home..." />
+                  <input
+                    type="text"
+                    placeholder="Find your nice home..."
+                    className="bg-transparent"
+                  />
                 </div>
                 <button className="p-2 bg-primary text-white rounded-lg shadow-primary shadow-sm">
                   <FiArrowRight />
@@ -276,13 +280,13 @@ export default function Home() {
                 />
               </div>
               <div className="absolute bottom-10 -left-2 sm:bottom-5 md:-left-20">
-                <div className="bg-white rounded-lg flex items-center w-72 p-3 shadow-lg">
+                <div className="bg-white rounded-lg flex items-center w-72 p-3 shadow-lg dark:bg-dark-light">
                   <p>We have been serving our customers for over 70 years</p>
                   <div className="icon-box bg-primary/20 text-primary flex-shrink-0">
                     <FiUsers />
                   </div>
                 </div>
-                <div className="bg-white rounded-lg flex items-center w-72 p-3 shadow-lg ml-8 mt-4">
+                <div className="bg-white rounded-lg flex items-center w-72 p-3 shadow-lg ml-8 mt-4 dark:bg-dark-light">
                   <p>
                     Working with the symbol and reputation of trustworthy trait
                   </p>
@@ -484,6 +488,33 @@ export default function Home() {
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus
             quia eius quaerat, quas deleniti sed. Sapiente illo architecto!
           </p>
+        </div>
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-16">
+          <img
+            src="/images/brands/airbnb.png"
+            alt=""
+            className="w-20 hover:scale-125 transition-a"
+          />
+          <img
+            src="/images/brands/cisco.png"
+            alt=""
+            className="w-20 hover:scale-125 transition-a"
+          />
+          <img
+            src="/images/brands/ebay.png"
+            alt=""
+            className="w-20 hover:scale-125 transition-a"
+          />
+          <img
+            src="/images/brands/microsoft.png"
+            alt=""
+            className="w-20 hover:scale-125 transition-a"
+          />
+          <img
+            src="/images/brands/uber.png"
+            alt=""
+            className="w-20 hover:scale-125 transition-a"
+          />
         </div>
       </div>
       {/* newsfeed */}

@@ -5,8 +5,13 @@ import { navLinks } from "./data/navLinks";
 import Home from "./pages/Home";
 import { Route, Routes } from "react-router-dom";
 import { BiBuildingHouse } from "react-icons/bi";
-import { FiFacebook } from "react-icons/fi";
-import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FiArrowRight, FiFacebook } from "react-icons/fi";
+import {
+  FaArrowRight,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
 
 function App() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -72,25 +77,47 @@ function App() {
         </Routes>
       </div>
       {/* Footer Section */}
-      <div className="bg-card-dark px-[2%] md:px-[6%] border">
+      <div className="px-[2%] lg:px-[6%] bg-card-dark border">
         {/* Newsletter */}
-        <div className="bg-primary rounded-lg -mt-24">
-          <div>
-            <img src="/images/3d-house.png" alt="" />
+        <div className="p-4 bg-primary rounded-lg max-w-7xl mx-auto -mt-24 flex flex-wrap items-center justify-center">
+          <img
+            src="/images/3d-house.png"
+            alt=""
+            className="basis-[20rem] flex-1 w-[400px] lg:w-[500px] h-[250px] object-contain"
+          />
+          <div className="text-white text-center md:text-start basis-[16rem] md:basis-[30rem] flex-1 ">
+            <h2 className="text-xl capitalize font-semibold">
+              subscribe to our newsletter
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Assumenda, earum.
+            </p>
+            <div className="flex justify-center items-center gap-2 mt-4 md:justify-start">
+              <input
+                type="text"
+                placeholder="Email address"
+                className="outline-none rounded-lg px-4 py-1"
+              />
+              <div className="btn-secondary p-2 rounded-md">
+                <FaArrowRight />
+              </div>
+            </div>
           </div>
-          <div></div>
         </div>
-        <div className="mt-20">
-          <footer className="flex flex-wrap gap-2 text-slate-200 max-w-7xl mx-auto justify-center px-4 items-center">
+        <div className="text-slate-200 mt-20 px-2">
+          <footer className="max-w-7xl mx-auto flex flex-wrap gap-4">
             <div className="basis-[10rem] flex-1">
-              <BiBuildingHouse className="text-primary text-3xl" />
-              <p>
+              <a href="">
+                <BiBuildingHouse className="text-primary text-3xl" />
+              </a>
+              <p className="text-sm my-3">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
                 harum explicabo illo, magnam vitae expedita.
               </p>
-              <div className="flex gap-5 my-5">
+              <div className="flex gap-4">
                 <div className="icon-box bg-dark-light hover:bg-hover-color-dark">
-                  <FiFacebook className="" />
+                  <FiFacebook />
                 </div>
                 <div className="icon-box bg-dark-light hover:bg-hover-color-dark">
                   <FaTwitter />
@@ -104,148 +131,84 @@ function App() {
               </div>
             </div>
             <div className="basis-[10rem] flex-1">
-              <h1>Services</h1>
+              <h2 className="font-semibold text-xl">Services</h2>
               <ul>
                 <li>
-                  <a
-                    href=""
-                    className="opacity-80 text-sm hover:text-primary transition-all duration-300 ease-in-out hover:ml-2"
-                  >
-                    Order Tracking
-                  </a>
+                  <a href="#">Order Tracking</a>
                 </li>
                 <li>
-                  <a
-                    href=""
-                    className="opacity-80 text-sm hover:text-primary transition-all duration-300 ease-in-out hover:ml-2"
-                  >
-                    Wishlist
-                  </a>
+                  <a href="#">Wishlist</a>
                 </li>
                 <li>
-                  <a
-                    href=""
-                    className="opacity-80 text-sm hover:text-primary transition-all duration-300 ease-in-out hover:ml-2"
-                  >
-                    Term of use
-                  </a>
+                  <a href="#">Terms of use</a>
                 </li>
                 <li>
-                  <a
-                    href=""
-                    className="opacity-80 text-sm hover:text-primary transition-all duration-300 ease-in-out hover:ml-2"
-                  >
-                    Contact Support
-                  </a>
+                  <a href="#">Contact support</a>
                 </li>
                 <li>
-                  <a
-                    href=""
-                    className="opacity-80 text-sm hover:text-primary transition-all duration-300 ease-in-out hover:ml-2"
-                  >
-                    2 years guarantee
-                  </a>
+                  <a href="#">2 years guarantee</a>
                 </li>
               </ul>
             </div>
             <div className="basis-[10rem] flex-1">
-              <h1>Quick Links</h1>
+              <h2 className="font-semibold text-xl">Quick Links</h2>
               <ul>
                 <li>
-                  <a
-                    href=""
-                    className="opacity-80 text-sm hover:text-primary transition-all duration-300 ease-in-out hover:ml-2"
-                  >
-                    About Us
-                  </a>
+                  <a href="#">About Us</a>
                 </li>
                 <li>
-                  <a
-                    href=""
-                    className="opacity-80 text-sm hover:text-primary transition-all duration-300 ease-in-out hover:ml-2"
-                  >
-                    Services
-                  </a>
+                  <a href="#">Services</a>
                 </li>
                 <li>
-                  <a
-                    href=""
-                    className="opacity-80 text-sm hover:text-primary transition-all duration-300 ease-in-out hover:ml-2"
-                  >
-                    Blog
-                  </a>
+                  <a href="#">Blog</a>
                 </li>
                 <li>
-                  <a
-                    href=""
-                    className="opacity-80 text-sm hover:text-primary transition-all duration-300 ease-in-out hover:ml-2"
-                  >
-                    Portfolio
-                  </a>
+                  <a href="#">Portfolio</a>
                 </li>
               </ul>
             </div>
             <div className="basis-[10rem] flex-1">
-              <h1>Business</h1>
+              <h2 className="font-semibold text-xl">Business</h2>
               <ul>
                 <li>
-                  <a
-                    href=""
-                    className="opacity-80 text-sm hover:text-primary transition-all duration-300 ease-in-out hover:ml-2"
-                  >
-                    Success
-                  </a>
+                  <a href="#">Success</a>
                 </li>
                 <li>
-                  <a
-                    href=""
-                    className="opacity-80 text-sm hover:text-primary transition-all duration-300 ease-in-out hover:ml-2"
-                  >
-                    Guide
-                  </a>
+                  <a href="#">Guide</a>
                 </li>
                 <li>
-                  <a
-                    href=""
-                    className="opacity-80 text-sm hover:text-primary transition-all duration-300 ease-in-out hover:ml-2"
-                  >
-                    Mission
-                  </a>
+                  <a href="#">Mission</a>
                 </li>
                 <li>
-                  <a
-                    href=""
-                    className="opacity-80 text-sm hover:text-primary transition-all duration-300 ease-in-out hover:ml-2"
-                  >
-                    Terms & Condition
-                  </a>
+                  <a href="#">Terms & Condition</a>
                 </li>
                 <li>
-                  <a
-                    href=""
-                    className="opacity-80 text-sm hover:text-primary transition-all duration-300 ease-in-out hover:ml-2"
-                  >
-                    Privacy Policy
-                  </a>
+                  <a href="#">Privacy Policy</a>
                 </li>
               </ul>
             </div>
-            <div className="basis-[10rem] flex-1">
-              <h1>Subscribe to our Newsletter</h1>
-              <p>
+            <div className="basis-[10rem] flex-1 text-center xl:text-start">
+              <h2 className="font-semibold text-xl">
+                Subscribe to our Newsletter
+              </h2>
+              <p className="text-sm my-2">
                 Subscribe to be the first one to know about updates. Enter your
                 email
               </p>
-              <div className="flex items-center gap-1 justify-center">
+              <div className="flex gap-2 justify-center">
                 <input
                   type="text"
-                  placeholder="Email Address"
-                  className="bg-transparent border border-dark rounded-lg outline-none px-4 py-[0.35rem]"
+                  placeholder="Email Address..."
+                  className="card-bordered bg-transparent rounded-lg px-4 py-[0.35rem]"
                 />
                 <button className="btn btn-primary">subscribe</button>
               </div>
             </div>
           </footer>
+          <div className="text-center border-t border-dark py-2 mt-3 text-muted">
+            Created by <span className="text-primary">Aderombi Sheriff</span> |
+            All Rights Reserved
+          </div>
         </div>
       </div>
     </div>
