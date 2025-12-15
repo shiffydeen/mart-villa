@@ -325,12 +325,12 @@ export default function Home() {
         </h1>
         <div className="flex gap-4 flex-wrap">
           {property.slice(0, 3).map((item) => (
-            <div className="shadow-lg rounded-lg overflow-hidden group basis-[18rem] flex-1 dark:border dark:border-card-dark">
+            <div className="shadow-light rounded-lg overflow-hidden group basis-[18rem] flex-1 border dark:border-card-dark ">
               <div className="relative overflow-hidden">
                 <img
                   src={item.image}
                   alt=""
-                  className="h-[250px] object-cover w-full group-hover:scale-125 transition-all duration-300 ease-in-out"
+                  className="h-[250px] object-cover w-full group-hover:scale-125 transition-a"
                 />
                 <div className="flex gap-x-2 absolute top-2 left-2">
                   <p className="bg-primary rounded-full px-3 py-[3px] text-sm text-white">
@@ -359,7 +359,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="space-y-4 p-3">
-                <h1 className="font-bold group-hover:text-primary transition-all duration-300 ease-in-out">
+                <h1 className="font-bold group-hover:text-primary transition-all duration-300 ease-in-out capitalize">
                   {item.name}
                 </h1>
 
